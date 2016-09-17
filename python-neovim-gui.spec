@@ -26,9 +26,6 @@ BuildRequires:	python-setuptools
 BuildRequires:	python3-modules
 BuildRequires:	python3-setuptools
 %endif
-Requires:	python-click
-Requires:	python-neovim
-Requires:	python-pygobject
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -37,9 +34,6 @@ Simple nvim GUI implemented using GTK
 %package -n python3-neovim-gui
 Summary:	Python GTK GUI for neovim
 Group:		Libraries/Python
-Requires:	python3-click
-Requires:	python3-neovim
-Requires:	python3-pygobject
 
 %description -n python3-neovim-gui
 Simple nvim GUI implemented using GTK
