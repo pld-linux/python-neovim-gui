@@ -1,0 +1,33 @@
+--- python-gui-0.1.3/neovim_gui/cli.py~	2016-06-28 11:14:40.000000000 +0200
++++ python-gui-0.1.3/neovim_gui/cli.py	2021-08-28 10:11:50.923335013 +0200
+@@ -4,8 +4,8 @@
+ import click
+ 
+ from .ui_bridge import UIBridge
+-from neovim import attach
+-from neovim.compat import IS_PYTHON3
++from pynvim import attach
++from pynvim.compat import IS_PYTHON3
+ 
+ 
+ @click.command(context_settings=dict(allow_extra_args=True))
+--- python-gui-0.1.3/neovim_gui/screen.py~	2016-06-28 11:14:40.000000000 +0200
++++ python-gui-0.1.3/neovim_gui/screen.py	2021-08-28 10:12:07.663348326 +0200
+@@ -1,5 +1,5 @@
+ """Common code for graphical and text UIs."""
+-from neovim.compat import IS_PYTHON3
++from pynvim.compat import IS_PYTHON3
+ 
+ 
+ __all__ = ('Screen',)
+--- python-gui-0.1.3/setup.py~	2016-06-28 11:14:40.000000000 +0200
++++ python-gui-0.1.3/setup.py	2021-08-28 10:14:41.773445045 +0200
+@@ -4,7 +4,7 @@
+ from setuptools import setup
+ 
+ install_requires = [
+-    'neovim>=0.1.3',
++    'pynvim>=0.3.1',
+     'click>=3.0',
+     'pygobject'
+ ]

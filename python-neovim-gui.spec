@@ -10,11 +10,12 @@
 Summary:	Python GTK GUI for neovim
 Name:		python-neovim-gui
 Version:	0.1.3
-Release:	5
+Release:	6
 License:	Apache v2.0
 Group:		Libraries/Python
 Source0:	https://github.com/neovim/python-gui/archive/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	99f03793e41150e71569c389a9256435
+Patch0:		pynvim-0.3.patch
 URL:		https://github.com/neovim/python-gui
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
@@ -40,6 +41,7 @@ Simple nvim GUI implemented using GTK
 
 %prep
 %setup -q -n python-gui-%{version}
+%patch0 -p1
 
 %build
 %if %{with python2}
