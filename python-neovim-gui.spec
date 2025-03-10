@@ -10,7 +10,7 @@
 Summary:	Python GTK GUI for neovim
 Name:		python-neovim-gui
 Version:	0.1.3
-Release:	9
+Release:	10
 License:	Apache v2.0
 Group:		Libraries/Python
 Source0:	https://github.com/neovim/python-gui/archive/%{version}/%{name}-%{version}.tar.gz
